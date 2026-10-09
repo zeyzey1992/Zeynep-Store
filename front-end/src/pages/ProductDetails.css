@@ -1,0 +1,39 @@
+.product-details {
+    padding: 30px;
+}
+
+.product-details h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product-content {
+    display: flex;
+    gap: 40px;
+   align-items: center;
+}
+
+.product-content img {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+}
+
+.product-info {
+    max-width: 500px;
+}
+
+.product-info p {
+    line-height: 1.6;
+    margin-top: 70px;
+}
+
+.product-price {
+    color: #C9A227;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.add-cart-button {
+    margin-top: 20px;
+}

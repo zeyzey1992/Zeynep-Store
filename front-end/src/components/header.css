@@ -1,0 +1,20 @@
+.logo{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+.header-container{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 3px 15px;
+}
+.header-container h1{
+    margin: 0;
+    font-size: 22px;
+    color: #C9A227
+    
+}
+.store-name{
+    text-decoration: none;
+}
