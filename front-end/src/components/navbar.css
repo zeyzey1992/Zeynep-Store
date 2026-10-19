@@ -44,10 +44,20 @@ nav button {
     transition: 0.2s;
     position: relative;
 }
+.cart-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 30px;
+    margin-right: 8px;
+}
+
 .cart-count{
     position: absolute;
-    top: 0;
-    right: 2px;
+    top: -4px;
+    right: -2px;
     width: 16px;
     height: 16px;
     background-color: #C9A227;
@@ -101,4 +111,25 @@ nav button:hover {
 .category-dropdown a:hover {
     background-color: #C9A227;
     color: #111111;
+}
+
+.user-section {
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.user-name {
+    color: #C9A227;
+    white-space: nowrap;
+}
+
+.user-section button {
+    width: auto;
+    padding: 0 10px;
+    white-space: nowrap;
+    margin-left: 0;
 }

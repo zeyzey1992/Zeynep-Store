@@ -8,12 +8,19 @@ import Cart from "./pages/Cart";
 import ProductDetails from "./pages/ProductDetails";
 import Dasboard from "./pages/Dashboard";
 import Categories from "./pages/Categories";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 
 
 
 function App() {
 
     const [cart, setCart] = useState([]);
+    const [user, setUser] = useState(()=>{
+        const savedUser = localStorage.getItem("user");
+        return savedUser ? JSON.parse(savedUser) : null;
+    });
+
     const [darkMode, setDarkMode] = useState(
         localStorage.getItem("darkMode") === "true");
 
@@ -32,6 +39,7 @@ function App() {
                 cart={cart} 
                 darkMode={darkMode}
                 setDarkMode={setDarkMode}
+                user={user}
                 />
             </div>
 
@@ -41,6 +49,17 @@ function App() {
                     path="/"
                     element={<Dasboard setCart={setCart} />}
                 />
+
+                <Route
+                    path="/register" 
+                    element={<Register/>} 
+                />
+
+                <Route
+                    path="/login" 
+                    element={<Login setUser={setUser}/>}
+                />
+                
                 <Route
                      path="/categories"
                     element={<Categories />}

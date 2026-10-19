@@ -5,7 +5,7 @@ import ModeNightIcon from '@mui/icons-material/ModeNight';
 import SunnyIcon from "@mui/icons-material/Sunny";
 import { useEffect, useState } from "react";
 
-function Navbar({ cart, darkMode, setDarkMode }){
+function Navbar({ cart, darkMode, setDarkMode, user}){
 
     const [categories, setCategories] = useState([]);
     
@@ -17,8 +17,6 @@ function Navbar({ cart, darkMode, setDarkMode }){
 
     return (
         <nav>
-            <a href="/">Home</a>
-            
             <div className="category-menu">
                 <Link to="/categories">Categories</Link>
 
@@ -52,6 +50,28 @@ function Navbar({ cart, darkMode, setDarkMode }){
                 {cart.length}
             </span>
             </Link>
+
+            {user ? (
+    <div className="user-section">
+        <span className="user-name">
+            Welcome, {user.name}
+        </span>
+
+        <button onClick={() => {
+            localStorage.removeItem("user");
+            localStorage.removeItem("token");
+            window.location.reload();
+        }}>
+            Logout
+        </button>
+    </div>
+) : (
+    <>
+        <Link to="/register">Register</Link>
+        <Link to="/login">Login</Link>
+    </>
+)}
+            
         </nav>
     );
 }

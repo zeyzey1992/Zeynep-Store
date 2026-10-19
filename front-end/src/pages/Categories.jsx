@@ -6,7 +6,6 @@ import { useParams } from "react-router-dom";
 function Categories(){
 
     const { slug } = useParams();
-    console.log("Slug:", slug);
     const [ Categories, setCategories] = useState([]);
     const [products, setProducts] = useState([]);   
     
