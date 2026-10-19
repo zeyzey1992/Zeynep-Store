@@ -48,4 +48,15 @@ exemples/
     │   └── App.css
     └── package.json
 
+🔐 Security
+
+Passwords are hashed using bcrypt before being stored.
+
+JWT is used for authentication.
+
+Environment variables are kept out of version control.
+
+👩‍💻 Developer
+
+Developed by Zeynep Ozalp as a software development project to practise frontend development, backend APIs, database integration, and user authentication.
 
